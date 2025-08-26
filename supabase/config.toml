@@ -1,0 +1,4 @@
+project_id = "eqnnneocoqzobdvyghma"
+
+[functions.generate-ai-questions]
+verify_jwt = false
