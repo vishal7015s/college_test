@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Users, Award, BookOpen } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const About = () => {
   return (
@@ -58,6 +59,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
