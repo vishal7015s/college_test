@@ -56,39 +56,6 @@ const TestSeries = () => {
       setLoading(false);
     }
   };
-
-  // ✅ FAQ Schema (JSON-LD)
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is SVCE Test Series?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "SVCE Test Series is a free platform where college students can practice aptitude, reasoning, and verbal ability questions to prepare for campus placements."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is the test series free to use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, all practice tests and series are completely free for students. You can attempt unlimited tests anytime."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How will this help in placements?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The test series is designed to cover common aptitude, reasoning, and verbal topics that companies ask in the first round of placements, helping students crack initial screening tests."
-        }
-      }
-    ]
-  };
-
   if (loading) {
     return (
       <div className="min-h-screen bg-background">
@@ -128,8 +95,6 @@ const TestSeries = () => {
         <meta property="og:url" content="https://svce.vercel.app/test-series" />
         <meta property="og:image" content="https://svce.vercel.app/test-series-preview.png" />
 
-        {/* FAQ Schema */}
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <Navbar />
