@@ -133,7 +133,7 @@ const TestSeries = () => {
           `}
         </script>
 
-        {/* ✅ Course Schema for Test Series */}
+        {/* ✅ Course Schema for Test Series - Fixed */}
         <script type="application/ld+json">
           {`
             {
@@ -141,15 +141,22 @@ const TestSeries = () => {
               "@type": "Course",
               "name": "SVCE Test Series - Campus Placement Preparation",
               "description": "Free aptitude and reasoning test series for campus placement preparation by SVCE",
+              "category": "Test Preparation",
               "provider": {
                 "@type": "Organization",
                 "name": "SVCE Test Series",
-                "sameAs": "https://svce.vercel.app"
+                "sameAs": "https://svce.vercel.app/"
+              },
+              "hasCourseInstance": {
+                "@type": "CourseInstance",
+                "courseMode": "online",
+                "courseWorkload": "PT1H"
               },
               "offers": {
                 "@type": "Offer",
                 "price": "0",
-                "priceCurrency": "INR"
+                "priceCurrency": "INR",
+                "category": "Free"
               }
             }
           `}
