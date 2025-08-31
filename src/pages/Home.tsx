@@ -67,21 +67,38 @@ const Home = () => {
     <div className="min-h-screen bg-gray-50 antialiased">
       {/* ✅ SEO Meta Tags for SVCE Optimization */}
       <Helmet>
-        <title>SVCE - Free Aptitude Tests & Mock Exams for Campus Placement</title>
+        <title>SVCE - Free Aptitude Test Series, Mock Tests, Practice Questions</title>
         <meta 
           name="description" 
-          content="SVCE offers free aptitude tests, reasoning quizzes, and mock exams to crack campus placement interviews. Practice with SVCE test series for best results." 
+          content="SVCE provides India's best free aptitude test series with 25,000+ practice questions. SVCE mock tests for campus placement, SVCE reasoning practice, and SVCE online test series." 
         />
         <meta 
           name="keywords" 
-          content="SVCE, aptitude tests, mock exams, campus placement, reasoning tests, free test series, SVCE test series" 
+          content="SVCE, SVCE test series, free aptitude tests, mock tests, campus placement, reasoning tests, SVCE practice questions" 
         />
+        
+        {/* ✅ Website Schema for SVCE */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "SVCE",
+              "url": "https://svce.vercel.app/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://svce.vercel.app/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }
+          `}
+        </script>
       </Helmet>
 
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gray-900">
+      {/* ✅ UPDATED Hero Section */}
+      <section ref={heroRef} className="relative overflow-hidden bg-gray-900">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
@@ -95,12 +112,15 @@ const Home = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-36">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2 text-center lg:text-left">
+              {/* ✅ UPDATED HEADING */}
               <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
-                Master <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-200">Aptitude Tests</span> with SVCE
+                SVCE - Free Test Series for Aptitude Practice
               </h1>
 
+              {/* ✅ UPDATED DESCRIPTION */}
               <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto lg:mx-0 leading-relaxed">
-                SVCE helps you boost exam performance with 25,000+ practice questions, detailed solutions, and AI-powered analytics designed for CAT, GMAT, Bank PO and other competitive exams.
+                SVCE provides India's best free aptitude test series with 25,000+ practice questions. 
+                SVCE mock tests for campus placement, SVCE reasoning practice, and SVCE online test series.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -133,10 +153,10 @@ const Home = () => {
 
               <div className="mt-12 flex flex-wrap justify-center lg:justify-start gap-4">
                 {[
-                  "CAT Aspirants",
-                  "Bank PO Exams", 
-                  "GMAT Preparation",
-                  "Campus Placements"
+                  "SVCE CAT Preparation",
+                  "SVCE Bank PO Exams", 
+                  "SVCE GMAT Preparation",
+                  "SVCE Campus Placements"
                 ].map((tag, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
                     <span className="text-white text-sm font-medium">{tag}</span>
@@ -203,7 +223,7 @@ const Home = () => {
                   <div className={`w-14 h-14 ${category.color} rounded-xl flex items-center justify-center mb-6`}>
                     <category.icon className="w-6 h-6" />
                   </div>
-                  <CardTitle className="text-xl font-semibold mb-4 text-gray-900">{category.title}</CardTitle>
+                  <CardTitle className="text-xl font-semibold mb-4 text-gray-900">SVCE {category.title}</CardTitle>
                   <ul className="space-y-2 mb-6 flex-grow">
                     {category.topics.map((topic, i) => (
                       <li key={i} className="flex items-center text-gray-600">
