@@ -70,7 +70,7 @@ const Home = () => {
         <title>SVCE - Free Aptitude Test Series, Mock Tests, Practice Questions</title>
         <meta 
           name="description" 
-          content="SVCE provides India's best free aptitude test series with 25,000+ practice questions. SVCE mock tests for campus placement, SVCE reasoning practice, and SVCE online test series." 
+          content="SVCE: India's #1 free aptitude test platform with 25,000+ practice questions. Get mock tests, reasoning practice, and online test series for campus placements." 
         />
         <meta 
           name="keywords" 
@@ -87,7 +87,7 @@ const Home = () => {
               "url": "https://svce.vercel.app/",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://svce.vercel.app/search?q={search_term_string}",
+                "target": "https://svce.vercel.app/test-series?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             }
@@ -114,7 +114,7 @@ const Home = () => {
             <div className="lg:w-1/2 text-center lg:text-left">
               {/* ✅ UPDATED HEADING */}
               <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
-                SVCE - Free Test Series for Aptitude Practice
+                SVCE - India's #1 Free Aptitude Test Series
               </h1>
 
               {/* ✅ UPDATED DESCRIPTION */}
@@ -165,6 +165,15 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ✅ Brand Clarification Section */}
+      <section className="bg-blue-600 py-4 text-white text-center">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="font-medium">
+            SVCE Test Series - Premium aptitude test preparation platform (Not affiliated with any college)
+          </p>
         </div>
       </section>
 
@@ -316,7 +325,21 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>      
+      </section>
+
+      {/* ✅ Internal Linking Section for Sitelinks */}
+      <section className="bg-gray-100 py-12">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-center mb-8">SVCE Test Series</h2>
+          <div className="grid md:grid-cols-4 gap-4 text-center">
+            <Link to="/test-series" className="text-blue-600 hover:underline font-medium">SVCE Aptitude Tests</Link>
+            <Link to="/test-series" className="text-blue-600 hover:underline font-medium">SVCE Reasoning Practice</Link>
+            <Link to="/test-series" className="text-blue-600 hover:underline font-medium">SVCE Mock Tests</Link>
+            <Link to="/test-series" className="text-blue-600 hover:underline font-medium">SVCE Verbal Ability</Link>
+          </div>
+        </div>
+      </section>
+      
       <Footer/>
     </div>
   );
